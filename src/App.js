@@ -31,7 +31,7 @@ function App() {
 				myVideo.current.srcObject = stream
 		})
 
-	socket.on("me", (id) => {
+	socket.on('me', (id) => {
 			setMe(id)
 		})
 
@@ -59,7 +59,7 @@ function App() {
 		})
 		peer.on("stream", (stream) => {
 			
-				userVideo.current.srcObject = stream
+			userVideo.current.srcObject = stream
 			
 		})
 		socket.on("callAccepted", (signal) => {
@@ -95,11 +95,11 @@ function App() {
 
 	return (
 		<>
-			<h1 style={{ textAlign: "center", color: '#fff' }}>Zoomish</h1>
+			<h1 style={{ textAlign: "center", color: '#fff' }}>Face-2-Face</h1>
 		<div className="container">
 			<div className="video-container">
 				<div className="video">
-					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "300px" }} />}
+					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "500px" }} />}
 				</div>
 				<div className="video">
 					{callAccepted && !callEnded ?
